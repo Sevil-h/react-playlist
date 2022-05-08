@@ -2,8 +2,11 @@ import React from "react";
 
 const Login = () => {
 	return (
-		<div>
-			<button>Login</button>
+		<div
+			className="container d-flex justify-content-center align-items-center"
+			style={{ height: "100vh" }}
+		>
+			<button className="btn btn-primary">Login</button>
 		</div>
 	);
 };
