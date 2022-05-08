@@ -1,4 +1,5 @@
 import React from "react";
+import { FaSpotify } from "react-icons/fa";
 
 const clientId = process.env.REACT_APP_CLIENT_ID;
 const redirectUri = "http://localhost:3000";
@@ -26,6 +27,9 @@ const Login = () => {
 			style={{ minHeight: "100%" }}
 		>
 			<a href={loginEndpoint} className="button">
+				<span className="icon">
+					<FaSpotify />
+				</span>
 				Login with Spotify
 			</a>
 		</div>

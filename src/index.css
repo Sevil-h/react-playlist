@@ -30,6 +30,12 @@ code {
 	animation: colorChange 0.75s ease-in-out;
 }
 
+.icon {
+	margin-right: 8px;
+	text-align: center;
+	font-size: 30px;
+}
+
 @keyframes colorChange {
 	0% {
 		background-color: #754668;
