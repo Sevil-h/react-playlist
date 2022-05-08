@@ -1,0 +1,54 @@
+.body {
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	grid-template-rows: 3fr 2fr;
+}
+
+.waveContainer {
+	width: 300vw;
+	height: 100%;
+	position: fixed;
+	transform: translate3d(0, 0, 0);
+}
+
+.wave {
+	opacity: 1;
+	position: absolute;
+	width: 100%;
+	height: 300vw;
+	transform-origin: 50% 49%;
+	border-radius: 49%;
+}
+
+.wave:nth-child(1) {
+	background-color: #754668;
+	animation: drift 9000ms infinite linear;
+	top: 60%;
+	left: -32%;
+}
+
+.wave:nth-child(2) {
+	background-color: #aa5042;
+	z-index: 2;
+	top: 60%;
+	left: -28%;
+	animation: drift 8000ms infinite linear;
+}
+
+.wave:nth-child(3) {
+	background-color: #3587a4;
+	animation: drift 4000ms infinite linear;
+	top: 60%;
+	left: -36%;
+	z-index: -2;
+}
+
+@keyframes drift {
+	from {
+		transform: rotate(0deg);
+	}
+	from {
+		transform: rotate(360deg);
+	}
+}

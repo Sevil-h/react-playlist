@@ -1,21 +1,31 @@
-import React, { useState } from "react";
+import React from "react";
 
-const clientId = "97ae56778f9c4caab0fc2382acbf8c75";
+const clientId = process.env.REACT_APP_CLIENT_ID;
 const redirectUri = "http://localhost:3000";
-const clientSecret = "57d21fe0371e446da955d2327edc1eb7";
-const scopes = ["user-library-read", "playlist-read-private"];
+const clientSecret = process.env.REACT_APP_CLIENT_SECRET;
+const scopes = [
+	"user-library-read",
+	"playlist-read-private",
+	"user-modify-playback-state",
+	"user-read-playback-state",
+	"user-read-currently-playing",
+	"user-read-recently-played",
+	"streaming",
+	"user-library-read",
+];
 const authEndpoint = "https://accounts.spotify.com/authorize?";
 const loginEndpoint = `${authEndpoint}client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
 	"%20"
 )}&response_type=token&show_dialog=true`;
 
+console.log(loginEndpoint);
 const Login = () => {
 	return (
 		<div
 			className="container d-flex justify-content-center align-items-center"
-			style={{ minHeight: "100vh" }}
+			style={{ minHeight: "100%" }}
 		>
-			<a href={loginEndpoint} className="btn btn-primary btn-lg">
+			<a href={loginEndpoint} className="button">
 				Login with Spotify
 			</a>
 		</div>
