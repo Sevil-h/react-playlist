@@ -1,0 +1,31 @@
+.nav {
+	position: fixed;
+	width: 100%;
+	margin: 0;
+	padding: 1rem;
+}
+
+.nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	list-style: none;
+}
+
+.nav ul li {
+	margin: 8px;
+	color: #754668;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.nav ul li:nth-child(1) {
+	opacity: 0.7;
+}
+
+.avatar {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
