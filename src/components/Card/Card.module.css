@@ -42,6 +42,7 @@
 	font-size: 56px;
 	color: #3587a4;
 	transition: all 0.4s ease-in-out;
+	cursor: pointer;
 }
 .icon:hover {
 	opacity: 0.8;
@@ -94,8 +95,9 @@
 .socialIcon {
 	font-size: 24px;
 	color: #754668;
-	opacity: 0.8;
+	opacity: 0.7;
 	transition: all 0.4s ease-in-out;
+	cursor: pointer;
 }
 .socialIcon:hover {
 	opacity: 1;
