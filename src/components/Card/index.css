@@ -7,7 +7,7 @@
 .line {
 	margin-right: 2px;
 	width: 3px;
-	background-color: #db9387;
+	background-color: #edc3bd;
 	border-radius: 16px;
 }
 
@@ -161,4 +161,8 @@
 }
 .line:nth-child(50) {
 	height: 25px;
+}
+
+.color {
+	background-color: #e0b6b1;
 }
