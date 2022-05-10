@@ -4,8 +4,97 @@
 	left: 50%;
 	z-index: 20;
 	transform: translate(-50%, -50%);
-	padding: 2rem;
+	padding: 1.5rem 3rem;
 	background-color: rgba(242, 215, 211, 0.8);
 	border-radius: 16px;
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+.playContainer {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.image {
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+	border: 4px solid #f2d7d3;
+	animation: turnAround 4s infinite linear;
+}
+
+.icon {
+	position: absolute;
+	font-size: 56px;
+	color: #3587a4;
+}
+
+.smallEffect {
+	background-color: #3587a4;
+	width: 220px;
+	height: 160px;
+	position: absolute;
+	z-index: -1;
+	border-radius: 50%;
+	opacity: 0.5;
+}
+
+.bigEffect {
+	background-color: #3587a4;
+	width: 260px;
+	height: 100px;
+	position: absolute;
+	z-index: -2;
+	border-radius: 50%;
+	opacity: 0.2;
+}
+
+.details {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.details h2 {
+	color: #fff9e0;
+}
+
+.details h4 {
+	color: #fff9e0;
+}
+
+.time {
+	color: #fff9e0;
+}
+
+.icons {
+	display: flex;
+	justify-content: space-between;
+}
+
+.socialIcon {
+	font-size: 24px;
+	color: #aa5042;
+	opacity: 0.8;
+	transition: all 0.4s ease-in-out;
+}
+.socialIcon:hover {
+	opacity: 1;
+}
+
+.favorite {
+	font-size: 24px;
+	color: #aa5042;
+	opacity: 1;
+}
+
+@keyframes turnAround {
+	from {
+		transform: rotate(0deg);
+	}
+	from {
+		transform: rotate(360deg);
+	}
 }
