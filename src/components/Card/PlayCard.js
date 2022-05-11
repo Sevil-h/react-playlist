@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import classes from "./Card.module.css";
 import { FaPlayCircle, FaRegStopCircle } from "react-icons/fa";
 import { BsFillSuitHeartFill, BsArrowRepeat } from "react-icons/bs";
-import Playlist from "./Playlist";
 import "./index.css";
 
 const PlayCard = () => {

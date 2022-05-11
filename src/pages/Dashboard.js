@@ -1,5 +1,4 @@
 import PlayCard from "../components/Card/PlayCard";
-import Playlist from "../components/Card/Playlist";
 const Dashboard = () => {
 	// const [image, setImage] = useState("");
 

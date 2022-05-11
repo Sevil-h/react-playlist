@@ -4,7 +4,6 @@ import { Route, Routes } from "react-router-dom";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Layout from "./components/Layout/Layout";
-import Playlist from "./components/Card/Playlist";
 import Card from "./components/UI/Card/Card";
 import SpotifyWebApi from "spotify-web-api-js";
 import { DataLayerContext } from "./context/DataLayer";
