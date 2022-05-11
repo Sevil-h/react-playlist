@@ -5,6 +5,8 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import { setClientToken } from "./hooks/useAuth";
 import Layout from "./components/Layout/Layout";
+import Playlist from "./components/Card/Playlist";
+import Card from "./components/UI/Card/Card";
 
 function App() {
 	const [token, setToken] = useState("");
@@ -29,9 +31,12 @@ function App() {
 			{!token ? (
 				<Login />
 			) : (
-				<Routes>
-					<Route path="/" element={<Dashboard />} />
-				</Routes>
+				<Card>
+					<Routes>
+						<Route path="/" element={<Dashboard />} />
+						<Route path="/playlist" element={<Playlist />} />
+					</Routes>
+				</Card>
 			)}
 		</Layout>
 	);
