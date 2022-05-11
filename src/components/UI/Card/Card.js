@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./Card.module.css";
 import { Link } from "react-router-dom";
-
+import axios from "axios";
 const Card = (props) => {
 	const [isShow, setIsShow] = useState(false);
+	const [isLoading, setIsLoading] = useState(false);
+
 	return (
 		<div className={classes.card}>
 			<div className={classes.playlist}>

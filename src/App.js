@@ -7,6 +7,9 @@ import { setClientToken } from "./hooks/useAuth";
 import Layout from "./components/Layout/Layout";
 import Playlist from "./components/Card/Playlist";
 import Card from "./components/UI/Card/Card";
+import SpotifyWebApi from "spotify-web-api-js";
+
+const spotify = new SpotifyWebApi();
 
 function App() {
 	const [token, setToken] = useState("");
@@ -20,9 +23,13 @@ function App() {
 			window.localStorage.setItem("token", _token);
 			setToken(_token);
 			setClientToken(_token);
+			spotify.setAccessToken(_token);
 		} else {
 			setToken(token);
 			setClientToken(token);
+			spotify.setAccessToken(token);
+
+			spotify.getMe().then((user) => console.log(user));
 		}
 	}, []);
 

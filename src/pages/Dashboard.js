@@ -1,5 +1,5 @@
 import PlayCard from "../components/Card/PlayCard";
-
+import useFetch from "../hooks/useFetch";
 const Dashboard = () => {
 	// const [image, setImage] = useState("");
 
@@ -10,7 +10,11 @@ const Dashboard = () => {
 	// 		data.items.map((item) => console.log(item));
 	// 	});
 	// }, []);
-	return <PlayCard />;
+	return (
+		<>
+			<PlayCard />
+		</>
+	);
 };
 
 export default Dashboard;
