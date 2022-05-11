@@ -105,3 +105,19 @@
 		transform: rotate(-360deg);
 	}
 }
+
+.moveIcons {
+	display: flex;
+	justify-content: center;
+}
+
+.moveIcon {
+	font-size: 24px;
+	color: #3587a4;
+	margin: 4px 16px;
+	transition: all 0.4s ease-in-out;
+	cursor: pointer;
+}
+.moveIcon:hover {
+	opacity: 0.7;
+}

@@ -33,6 +33,12 @@ function App() {
 					user: user,
 				});
 			});
+			spotify.getUserPlaylists().then((playlists) => {
+				dispatch({
+					type: "SET_PLAYLISTS",
+					playlists: playlists,
+				});
+			});
 		}
 	}, []);
 	console.log(user);
@@ -43,7 +49,7 @@ function App() {
 			) : (
 				<Card>
 					<Routes>
-						<Route path="/" element={<Dashboard />} />
+						<Route path="/" element={<Dashboard spotify={spotify} />} />
 						<Route path="/playlist" element={<Player spotify={spotify} />} />
 						<Route path="/library" element={<Library />} />
 					</Routes>

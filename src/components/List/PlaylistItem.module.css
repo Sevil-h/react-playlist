@@ -4,6 +4,7 @@
 	justify-content: start;
 	align-items: center;
 	border-bottom: 1px solid gray;
+	color: gray;
 }
 
 .icon {
@@ -21,4 +22,7 @@
 	margin-right: 4px;
 	transition: all 0.4s ease-in-out;
 	color: #754668;
+}
+span {
+	margin-left: 8px;
 }

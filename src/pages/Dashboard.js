@@ -1,5 +1,5 @@
 import PlayCard from "../components/Card/PlayCard";
-const Dashboard = () => {
+const Dashboard = ({ spotify }) => {
 	// const [image, setImage] = useState("");
 
 	// useEffect(() => {
@@ -11,7 +11,7 @@ const Dashboard = () => {
 	// }, []);
 	return (
 		<>
-			<PlayCard />
+			<PlayCard spotify={spotify} />
 		</>
 	);
 };

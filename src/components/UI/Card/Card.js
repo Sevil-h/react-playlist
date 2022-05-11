@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import classes from "./Card.module.css";
 import Navigation from "../Navigation/Navigation";
 const Card = (props) => {

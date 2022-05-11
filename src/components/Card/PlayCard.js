@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import classes from "./Card.module.css";
 import { FaPlayCircle, FaRegStopCircle } from "react-icons/fa";
 import { BsFillSuitHeartFill, BsArrowRepeat } from "react-icons/bs";
+import { AiOutlineForward, AiFillBackward } from "react-icons/ai";
 import "./index.css";
 
-const PlayCard = () => {
+const PlayCard = ({ spotify }) => {
 	const [isPlaying, setIsPlaying] = useState(true);
 
 	// let animation;
@@ -41,6 +42,10 @@ const PlayCard = () => {
 				<div className={classes.smallEffect}></div>
 				<div className={classes.bigEffect}></div>
 			</div>
+			{/* <div className={classes.moveIcons}>
+				<AiFillBackward className={classes.moveIcon} />
+				<AiOutlineForward className={classes.moveIcon} />
+			</div> */}
 			<div className={classes.details}>
 				<h2>Tearing me up</h2>
 				<h4>Bob Mmoses</h4>

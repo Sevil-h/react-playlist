@@ -1,0 +1,14 @@
+li {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	color: gray;
+	margin: 2px;
+	font-weight: 500;
+}
+
+.icon {
+	color: #aa5042;
+}
