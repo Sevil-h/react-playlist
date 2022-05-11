@@ -1,7 +1,7 @@
 import React from "react";
-
-const Player = () => {
-	return <div></div>;
+import Playlist from "../components/Card/Playlist";
+const Player = ({ spotify }) => {
+	return <Playlist />;
 };
 
 export default Player;
