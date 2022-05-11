@@ -1,0 +1,33 @@
+.card {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 20;
+	transform: translate(-50%, -50%);
+	background-color: rgba(242, 215, 211, 0.7);
+	border-radius: 16px;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+	min-width: 360px;
+	height: 500px;
+	overflow: scroll;
+}
+
+.playlist {
+	text-align: end;
+	background-color: #aa5042;
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+	padding: 0.5rem;
+}
+.link {
+	text-decoration: none;
+	margin-right: 1rem;
+	letter-spacing: 1.2px;
+	font-weight: bold;
+	color: #f2d7d3;
+	transition: all 0.4s ease-in-out;
+}
+
+.link:hover {
+	color: #fff9e0;
+}
