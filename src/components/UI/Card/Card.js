@@ -18,7 +18,7 @@ const Card = (props) => {
 					</Link>
 				) : (
 					<Link to="/" onClick={() => setIsShow(!isShow)}>
-						Home
+						Player
 					</Link>
 				)}
 			</div>
