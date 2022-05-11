@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import classes from "./Card.module.css";
-import { Link, useNative } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Card = (props) => {
 	const [isShow, setIsShow] = useState(false);

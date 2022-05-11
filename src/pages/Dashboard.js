@@ -1,8 +1,4 @@
-import React, { useEffect, useState } from "react";
-import apiClient from "../hooks/useAuth";
 import PlayCard from "../components/Card/PlayCard";
-import Library from "../library/Library";
-import Playlist from "../components/Card/Playlist";
 
 const Dashboard = () => {
 	// const [image, setImage] = useState("");
@@ -14,11 +10,7 @@ const Dashboard = () => {
 	// 		data.items.map((item) => console.log(item));
 	// 	});
 	// }, []);
-	return (
-		<>
-			<PlayCard />
-		</>
-	);
+	return <PlayCard />;
 };
 
 export default Dashboard;
