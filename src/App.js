@@ -3,7 +3,6 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
-import { setClientToken } from "./hooks/useAuth";
 import Layout from "./components/Layout/Layout";
 import Playlist from "./components/Card/Playlist";
 import Card from "./components/UI/Card/Card";
@@ -22,14 +21,11 @@ function App() {
 			const _token = hash.split("&")[0].split("=")[1];
 			window.localStorage.setItem("token", _token);
 			setToken(_token);
-			setClientToken(_token);
 			spotify.setAccessToken(_token);
 		} else {
 			setToken(token);
-			setClientToken(token);
 			spotify.setAccessToken(token);
-
-			spotify.getMe().then((user) => console.log(user));
+			// spotify.getMe().then((user) => console.log(user));
 		}
 	}, []);
 
