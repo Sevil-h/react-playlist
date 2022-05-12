@@ -17,7 +17,11 @@ const PlayCard = () => {
 		<div className={classes.play}>
 			<div className={classes.playContainer}>
 				<img
-					src={currentSong ? currentSong?.item.album.images[0].url : ""}
+					src={
+						currentSong
+							? currentSong?.item.album.images[0].url
+							: "https://i.scdn.co/image/ab67616d00001e02d6df3bccf3ec41ea2f76debc"
+					}
 					className={isPlaying ? classes.image : classes.stop}
 					alt="image"
 				/>
@@ -30,8 +34,12 @@ const PlayCard = () => {
 				<div className={classes.bigEffect}></div>
 			</div>
 			<div className={classes.details}>
-				{currentSong ? <h2>{currentSong?.item.name}</h2> : ""}
-				{currentSong ? <h4>{currentSong?.item.artists[0].name}</h4> : ""}
+				{currentSong ? <h2>{currentSong?.item.name}</h2> : "Budapest"}
+				{currentSong ? (
+					<h4>{currentSong?.item.artists[0].name}</h4>
+				) : (
+					"George Ezra"
+				)}
 				<div className="linesWrapper">
 					<div className={isPlaying ? "line color" : "line colorStop"}></div>
 					<div className={isPlaying ? "line color" : "line colorStop"}></div>

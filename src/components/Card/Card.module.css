@@ -31,9 +31,10 @@
 	color: #3587a4;
 	transition: all 0.4s ease-in-out;
 	cursor: pointer;
+	opacity: 0.6;
 }
 .icon:hover {
-	opacity: 0.8;
+	opacity: 1;
 }
 
 .smallEffect {

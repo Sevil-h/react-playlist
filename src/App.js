@@ -15,7 +15,7 @@ const spotify = new SpotifyWebApi();
 
 function App() {
 	const [isLoading, setIsLoading] = useState(false);
-	const [{ user, token, playlist }, dispatch] = useContext(DataLayerContext);
+	const [{ token, currentSong }, dispatch] = useContext(DataLayerContext);
 	useEffect(() => {
 		const hash = getTokenFromUrl();
 		window.location.hash = "";

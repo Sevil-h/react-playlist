@@ -5,7 +5,6 @@ import { MdOutlineMusicNote } from "react-icons/md";
 
 const PlaylistsItem = () => {
 	const [{ playlists }] = useContext(DataLayerContext);
-	console.log("playlists", playlists);
 	return (
 		<>
 			{playlists?.items?.map((playlist) => (
