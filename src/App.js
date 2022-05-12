@@ -11,11 +11,16 @@ import { getTokenFromUrl } from "./spotify";
 import Player from "./pages/Player";
 import Library from "./pages/Library";
 
-const spotify = new SpotifyWebApi();
+const spotify = new SpotifyWebApi({
+	redirectUri: process.env.REACT_APP_REDIRECT_API,
+	clientId: process.env.REACT_APP_CLIENT_ID,
+	clientSecret: process.env.REACT_APP_CLIENT_SECRET,
+});
 
 function App() {
 	const [isLoading, setIsLoading] = useState(false);
-	const [{ token, currentSong }, dispatch] = useContext(DataLayerContext);
+	const [{ token }, dispatch] = useContext(DataLayerContext);
+
 	useEffect(() => {
 		const hash = getTokenFromUrl();
 		window.location.hash = "";
@@ -49,6 +54,10 @@ function App() {
 				dispatch({
 					type: "SET_CURRENT_PLAYBACK",
 					current_playback: track,
+				});
+				dispatch({
+					type: "SET_TRACK",
+					trackUri: track.item.uri,
 				});
 			});
 		}

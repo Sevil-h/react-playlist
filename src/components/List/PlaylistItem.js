@@ -6,6 +6,7 @@ import { DataLayerContext } from "../../context/DataLayer";
 
 const PlaylistItem = () => {
 	const [{ playlist }] = useContext(DataLayerContext);
+	console.log(playlist);
 	return (
 		<>
 			{playlist?.tracks?.items?.map((item) => (

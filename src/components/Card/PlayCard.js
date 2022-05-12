@@ -7,8 +7,8 @@ import "./index.css";
 
 const PlayCard = () => {
 	const [isPlaying, setIsPlaying] = useState(true);
-	const [{ currentSong }] = useContext(DataLayerContext);
-
+	const [playingTrack, setPlayingTrack] = useState();
+	const [{ currentSong, token, trackUri }] = useContext(DataLayerContext);
 	const playingHandler = () => {
 		setIsPlaying(!isPlaying);
 	};

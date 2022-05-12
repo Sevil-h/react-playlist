@@ -6,6 +6,7 @@ export const initialState = {
 	token: null,
 	playlist: null,
 	currentSong: null,
+	trackUri: [],
 };
 
 const reducer = (state, action) => {
@@ -38,6 +39,11 @@ const reducer = (state, action) => {
 				currentSong: action.current_playback,
 			};
 		}
+		case "SET_TRACK":
+			return {
+				...state,
+				trackUri: action.trackUri,
+			};
 		default:
 			return state;
 	}
