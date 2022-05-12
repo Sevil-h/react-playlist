@@ -34,11 +34,11 @@ const PlayCard = () => {
 				<div className={classes.bigEffect}></div>
 			</div>
 			<div className={classes.details}>
-				{currentSong ? <h2>{currentSong?.item.name}</h2> : "Budapest"}
+				{currentSong ? <h2>{currentSong?.item.name}</h2> : <h2>"Budapest"</h2>}
 				{currentSong ? (
 					<h4>{currentSong?.item.artists[0].name}</h4>
 				) : (
-					"George Ezra"
+					<h4>"George Ezra"</h4>
 				)}
 				<div className="linesWrapper">
 					<div className={isPlaying ? "line color" : "line colorStop"}></div>
