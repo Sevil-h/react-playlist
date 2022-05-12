@@ -9,7 +9,7 @@ const PlaylistsItem = () => {
 	return (
 		<>
 			{playlists?.items?.map((playlist) => (
-				<li key={playlist.id}>
+				<li key={playlist.id} id={playlist.id}>
 					<span className={classes.icon}>
 						<MdOutlineMusicNote />
 					</span>

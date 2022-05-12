@@ -14,8 +14,8 @@ import Library from "./pages/Library";
 const spotify = new SpotifyWebApi();
 
 function App() {
-	const [{ user, token }, dispatch] = useContext(DataLayerContext);
-
+	const [isLoading, setIsLoading] = useState(false);
+	const [{ user, token, playlist }, dispatch] = useContext(DataLayerContext);
 	useEffect(() => {
 		const hash = getTokenFromUrl();
 		window.location.hash = "";
@@ -39,13 +39,27 @@ function App() {
 					playlists: playlists,
 				});
 			});
+			spotify.getPlaylist("37i9dQZF1DXdPIbPNr916x").then((response) => {
+				dispatch({
+					type: "SET_PLAYLIST",
+					playlist: response,
+				});
+			});
+			spotify.getMyCurrentPlaybackState().then((track) => {
+				dispatch({
+					type: "SET_CURRENT_PLAYBACK",
+					current_playback: track,
+				});
+			});
 		}
 	}, []);
-	console.log(user);
+
 	return (
 		<Layout>
 			{!token ? (
 				<Login />
+			) : isLoading ? (
+				<p>Loading...</p>
 			) : (
 				<Card>
 					<Routes>

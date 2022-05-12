@@ -164,5 +164,37 @@
 }
 
 .color {
-	background-color: #e0b6b1;
+	animation: play 3s linear 0s infinite forwards;
+}
+.colorStop {
+	animation: play 3s linear 0s infinite forwards;
+	animation-play-state: paused;
+}
+
+@keyframes play {
+	0% {
+		background-color: #754668;
+		transform: translateY(70%);
+	}
+	20% {
+		background-color: #f2d7d3;
+		transform: translateY(20%);
+	}
+	40% {
+		background-color: #3587a4;
+		transform: translateY(85%);
+	}
+	60% {
+		background-color: #aa5042;
+		transform: translateY(15%);
+	}
+
+	80% {
+		background-color: #754668;
+		transform: translateY(90%);
+	}
+	100% {
+		background-color: #fff9e0;
+		transform: translateY(10%);
+	}
 }

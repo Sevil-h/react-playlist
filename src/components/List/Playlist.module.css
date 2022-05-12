@@ -2,3 +2,10 @@
 	margin: 0;
 	padding: 0;
 }
+
+.listName {
+	text-align: center;
+	margin: 8px 0;
+	font-weight: bold;
+	color: #754668;
+}
